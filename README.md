@@ -64,6 +64,25 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
+### Deploy to GitHub Pages (CI)
+
+This repo includes a GitHub Actions workflow that builds the app and publishes the `dist/` directory to the `gh-pages` branch.
+
+- Workflow: `.github/workflows/gh-pages.yml` (trigger: push to `main`)
+- The workflow sets the published CNAME to `nexax.global` so the site will be available at `https://nexax.global`.
+
+Notes:
+
+- The project uses a SPA routing strategy; the `postbuild` script copies `dist/index.html` to `dist/404.html` so client-side routing works on GitHub Pages.
+- Make sure DNS for `nexax.global` points to GitHub Pages. For apex domains add the following A records:
+
+	- 185.199.108.153
+	- 185.199.109.153
+	- 185.199.110.153
+	- 185.199.111.153
+
+If you prefer a PR instead of direct commits, tell me and I will open a branch for review.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
