@@ -88,8 +88,42 @@ export const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" className="section-padding bg-muted/30">
-      <div className="section-container">
+    <section id="services" className="section-padding relative overflow-hidden">
+      {/* Cosmic Background */}
+      <div 
+        className="absolute inset-0"
+        style={{ 
+          background: `
+            radial-gradient(ellipse at top left, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at top right, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom right, rgba(16, 185, 129, 0.12) 0%, transparent 50%),
+            rgba(249, 250, 251, 0.95)
+          `
+        }}
+      />
+      
+      {/* Animated particles */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-primary/40 rounded-full animate-twinkle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          />
+        ))}
+        
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-pink-200/25 blur-3xl animate-float" />
+        <div className="absolute bottom-1/3 -left-32 w-[450px] h-[450px] rounded-full bg-blue-200/25 blur-3xl animate-float" style={{ animationDelay: "3s" }} />
+        <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-purple-200/20 blur-3xl animate-float" style={{ animationDelay: "6s" }} />
+      </div>
+      
+      <div className="section-container relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
