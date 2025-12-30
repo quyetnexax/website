@@ -10,7 +10,8 @@ const services = [
   {
     icon: Brain,
     title: "AI & Machine Learning",
-    description: "Intelligent solutions powered by cutting-edge AI, from recommendation engines to natural language processing."
+    description: "Intelligent solutions powered by cutting-edge AI, from recommendation engines to natural language processing.",
+    image: "/ai-ml.png"
   },
   {
     icon: BarChart3,
