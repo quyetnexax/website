@@ -83,30 +83,9 @@ export const AboutSection = () => {
               </div>
             </div>
 
-            {/* Timeline */}
-            <div className="mt-8 bg-card/30 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/10">
-              <h4 className="font-semibold text-white mb-4">Our Journey</h4>
-              <div className="space-y-4">
-                {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className="flex items-start gap-4">
-                    <div className="flex flex-col items-center">
-                      <div className="w-3 h-3 rounded-full bg-primary" />
-                      {index < milestones.length - 1 && (
-                        <div className="w-0.5 h-8 bg-white/20" />
-                      )}
-                    </div>
-                    <div className="pb-4">
-                      <span className="text-primary font-semibold">{milestone.year}</span>
-                      <p className="text-white/80 text-sm">{milestone.event}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Floating Badge */}
             <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">
-              <span className="text-sm font-semibold">Since 2018</span>
+              <span className="text-sm font-semibold">Since 2025</span>
             </div>
           </div>
         </div>
