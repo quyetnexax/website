@@ -84,8 +84,16 @@ export const AboutSection = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">
-              <span className="text-sm font-semibold">Since 2025</span>
+            <div className="absolute -top-4 -right-4 rounded-full shadow-lg overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="/building-tech.png" 
+                  alt="Since 2025"
+                  className="w-full h-full object-cover absolute inset-0"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <span className="relative text-sm font-semibold text-white px-4 py-2 block">Since 2025</span>
+              </div>
             </div>
           </div>
         </div>
