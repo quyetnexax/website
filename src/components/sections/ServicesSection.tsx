@@ -118,16 +118,16 @@ export const ServicesSection = () => {
             {[...servicesWithImages, ...servicesWithImages].map((service, index) => (
               <div
                 key={`${service.title}-${index}`}
-                className="group relative rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 overflow-hidden flex-shrink-0 w-[400px] h-[320px]"
+                className="group relative rounded-3xl overflow-hidden flex-shrink-0 w-[400px] h-[320px] shadow-lg shadow-black/20 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                 </div>
                 
                 {/* Content Overlay */}
@@ -156,16 +156,16 @@ export const ServicesSection = () => {
             {[...otherServices, ...otherServices].map((service, index) => (
               <div
                 key={`${service.title}-${index}`}
-                className="group relative rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 overflow-hidden flex-shrink-0 w-[400px] h-[320px]"
+                className="group relative rounded-3xl overflow-hidden flex-shrink-0 w-[400px] h-[320px] shadow-lg shadow-black/20 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                 </div>
                 
                 {/* Content Overlay */}
