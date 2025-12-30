@@ -92,9 +92,9 @@ export const ServicesSection = () => {
       {/* Light overlay for contrast */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
       
-      <div className="relative z-10">
+      <div className="section-container relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
             What We Do
           </span>
@@ -109,7 +109,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Sliding Image Cards - Right to Left */}
-        <div className="mb-8 overflow-hidden">
+        <div className="mb-8 overflow-hidden -mx-6">
           <div 
             ref={scrollRef}
             className="flex gap-6 overflow-x-hidden pb-4 pl-6"
@@ -147,7 +147,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Other Services Sliding - Left to Right */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden -mx-6">
           <div 
             ref={scrollRef2}
             className="flex gap-6 overflow-x-hidden pb-4 pl-6"
