@@ -69,14 +69,18 @@ export const AboutSection = () => {
           <div className="relative">
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <div 
-                className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center"
-              >
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="aspect-[4/3] relative flex items-center justify-center">
+                <img 
+                  src="/building-tech.png" 
+                  alt="Building Technology"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="text-center p-8 relative z-10">
+                  <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                     <span className="text-4xl font-bold gradient-text">NX</span>
                   </div>
-                  <p className="text-white/70">
+                  <p className="text-white/90">
                     Building technology for tomorrow, today
                   </p>
                 </div>
@@ -84,16 +88,8 @@ export const AboutSection = () => {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 rounded-full shadow-lg overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="/building-tech.png" 
-                  alt="Since 2025"
-                  className="w-full h-full object-cover absolute inset-0"
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                <span className="relative text-sm font-semibold text-white px-4 py-2 block">Since 2025</span>
-              </div>
+            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">
+              <span className="text-sm font-semibold">Since 2025</span>
             </div>
           </div>
         </div>
