@@ -43,10 +43,10 @@ export const HeroSection = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-up stagger-1">
-            Scaling Intelligence
+            Engineering Intelligence
             <br />
             <span className="relative">
-              for Billions
+              for the World
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
                 <path d="M2 10C50 4 150 2 298 8" stroke="rgba(255,255,255,0.3)" strokeWidth="4" strokeLinecap="round" />
               </svg>
