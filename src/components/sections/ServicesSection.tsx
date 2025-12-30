@@ -109,7 +109,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Sliding Image Cards - Right to Left */}
-        <div className="mb-8 overflow-hidden -mx-6">
+        <div className="mb-8 overflow-hidden -mx-6 md:-mx-12 lg:-mx-24">
           <div 
             ref={scrollRef}
             className="flex gap-6 overflow-x-hidden pb-4 pl-6"
@@ -147,7 +147,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Other Services Sliding - Left to Right */}
-        <div className="overflow-hidden -mx-6">
+        <div className="overflow-hidden -mx-6 md:-mx-12 lg:-mx-24">
           <div 
             ref={scrollRef2}
             className="flex gap-6 overflow-x-hidden pb-4 pl-6"
