@@ -1,6 +1,7 @@
 import { Smartphone, Brain, BarChart3, Palette, Globe, Zap } from "lucide-react";
+import { useEffect, useRef } from "react";
 
-const services = [
+const servicesWithImages = [
   {
     icon: Smartphone,
     title: "Mobile Development",
@@ -18,7 +19,10 @@ const services = [
     title: "Data Analytics",
     description: "Transform raw data into actionable insights with our advanced analytics and business intelligence solutions.",
     image: "/data.png"
-  },
+  }
+];
+
+const otherServices = [
   {
     icon: Palette,
     title: "Product Design",
@@ -37,6 +41,28 @@ const services = [
 ];
 
 export const ServicesSection = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const scrollSpeed = 0.5;
+
+    const autoScroll = () => {
+      scrollAmount += scrollSpeed;
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+      }
+      scrollContainer.scrollLeft = scrollAmount;
+      requestAnimationFrame(autoScroll);
+    };
+
+    const animationId = requestAnimationFrame(autoScroll);
+    return () => cancelAnimationFrame(animationId);
+  }, []);
+
   return (
     <section id="services" className="section-padding bg-muted/30">
       <div className="section-container">
@@ -55,16 +81,19 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group relative rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 overflow-hidden h-[320px]"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Background Image */}
-              {service.image ? (
+        {/* Sliding Image Cards */}
+        <div className="mb-8 overflow-hidden">
+          <div 
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-hidden pb-4"
+            style={{ scrollBehavior: 'auto' }}
+          >
+            {[...servicesWithImages, ...servicesWithImages].map((service, index) => (
+              <div
+                key={`${service.title}-${index}`}
+                className="group relative rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 overflow-hidden flex-shrink-0 w-[400px] h-[320px]"
+              >
+                {/* Background Image */}
                 <div className="absolute inset-0">
                   <img 
                     src={service.image} 
@@ -73,30 +102,47 @@ export const ServicesSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
                 </div>
-              ) : (
-                <div className="absolute inset-0 bg-card" />
-              )}
+                
+                {/* Content Overlay */}
+                <div className="relative h-full p-8 flex flex-col justify-end">
+                  <div className="text-white">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/90 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Other Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {otherServices.map((service, index) => (
+            <div
+              key={service.title}
+              className="group relative rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 overflow-hidden h-[320px]"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="absolute inset-0 bg-card" />
               
               {/* Content Overlay */}
               <div className="relative h-full p-8 flex flex-col justify-between">
-                <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
-                  {service.image ? (
-                    <div className="text-white">
-                      <service.icon size={28} />
-                    </div>
-                  ) : (
-                    <service.icon 
-                      size={28} 
-                      className="text-primary group-hover:text-primary-foreground transition-colors duration-300" 
-                    />
-                  )}
+                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <service.icon 
+                    size={28} 
+                    className="text-primary group-hover:text-primary-foreground transition-colors duration-300" 
+                  />
                 </div>
                 
-                <div className={service.image ? "text-white" : ""}>
+                <div>
                   <h3 className="text-xl font-semibold mb-3">
                     {service.title}
                   </h3>
-                  <p className={service.image ? "text-white/90 leading-relaxed" : "text-muted-foreground leading-relaxed"}>
+                  <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </div>
