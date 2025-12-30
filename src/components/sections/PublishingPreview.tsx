@@ -7,7 +7,7 @@ export const PublishingPreview = () => {
   const latestArticles = articles.slice(0, 3);
 
   return (
-    <section className="section-padding bg-muted/30">
+    <section className="section-padding relative">
       <div className="section-container">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

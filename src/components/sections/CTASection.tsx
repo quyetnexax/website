@@ -4,19 +4,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export const CTASection = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
-      {/* Background */}
-      <div 
-        className="absolute inset-0"
-        style={{ background: "var(--gradient-hero)" }}
-      />
-      
-      {/* Abstract shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-primary-foreground/5" />
-        <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-primary-foreground/5" />
-      </div>
-
+    <section className="section-padding relative">
       <div className="section-container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
