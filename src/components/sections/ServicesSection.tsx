@@ -16,7 +16,8 @@ const services = [
   {
     icon: BarChart3,
     title: "Data Analytics",
-    description: "Transform raw data into actionable insights with our advanced analytics and business intelligence solutions."
+    description: "Transform raw data into actionable insights with our advanced analytics and business intelligence solutions.",
+    image: "/data.png"
   },
   {
     icon: Palette,
