@@ -4,7 +4,8 @@ const services = [
   {
     icon: Smartphone,
     title: "Mobile Development",
-    description: "Native and cross-platform mobile apps built for performance, scalability, and exceptional user experience."
+    description: "Native and cross-platform mobile apps built for performance, scalability, and exceptional user experience.",
+    image: "/mobile-dev.png"
   },
   {
     icon: Brain,
@@ -60,11 +61,19 @@ export const ServicesSection = () => {
               className="group bg-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
-                <service.icon 
-                  size={28} 
-                  className="text-primary group-hover:text-primary-foreground transition-colors duration-300" 
-                />
+              <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 overflow-hidden">
+                {service.image ? (
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <service.icon 
+                    size={28} 
+                    className="text-primary group-hover:text-primary-foreground transition-colors duration-300" 
+                  />
+                )}
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {service.title}
