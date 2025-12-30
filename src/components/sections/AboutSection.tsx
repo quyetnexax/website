@@ -32,14 +32,14 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div>
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-white font-semibold text-sm uppercase tracking-wider mb-4 block">
               About NexaX
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Pioneering the Future of
               <span className="gradient-text"> Global Tech</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-lg leading-relaxed mb-8">
               NexaX is a technology company focused on building global mobile and AI products. 
               We combine product craftsmanship, user-first design, and data-driven insights to 
               accelerate growth and deliver world-class experiences at scale. Our mission is to 
@@ -57,8 +57,8 @@ export const AboutSection = () => {
                     <value.icon size={24} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{value.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                    <h3 className="font-semibold text-white mb-1">{value.title}</h3>
+                    <p className="text-white/80 text-sm leading-relaxed">{value.description}</p>
                   </div>
                 </div>
               ))}
@@ -76,7 +76,7 @@ export const AboutSection = () => {
                   <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <span className="text-4xl font-bold gradient-text">NX</span>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-white/70">
                     Building technology for tomorrow, today
                   </p>
                 </div>
@@ -84,20 +84,20 @@ export const AboutSection = () => {
             </div>
 
             {/* Timeline */}
-            <div className="mt-8 bg-card rounded-2xl p-6 shadow-lg border border-border/50">
-              <h4 className="font-semibold text-foreground mb-4">Our Journey</h4>
+            <div className="mt-8 bg-card/30 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/10">
+              <h4 className="font-semibold text-white mb-4">Our Journey</h4>
               <div className="space-y-4">
                 {milestones.map((milestone, index) => (
                   <div key={milestone.year} className="flex items-start gap-4">
                     <div className="flex flex-col items-center">
                       <div className="w-3 h-3 rounded-full bg-primary" />
                       {index < milestones.length - 1 && (
-                        <div className="w-0.5 h-8 bg-border" />
+                        <div className="w-0.5 h-8 bg-white/20" />
                       )}
                     </div>
                     <div className="pb-4">
                       <span className="text-primary font-semibold">{milestone.year}</span>
-                      <p className="text-muted-foreground text-sm">{milestone.event}</p>
+                      <p className="text-white/80 text-sm">{milestone.event}</p>
                     </div>
                   </div>
                 ))}
