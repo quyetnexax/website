@@ -23,6 +23,16 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="padding: 20px; font-family: sans-serif;">
+        <h1>Loading...</h1>
+        <p>If you see this message for more than a few seconds, please check the browser console for errors.</p>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('Global error:', e.error);
+      });
+    </script>
   </body>
 </html>
