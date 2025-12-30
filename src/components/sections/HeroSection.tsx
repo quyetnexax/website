@@ -77,20 +77,16 @@ export const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-primary-foreground/10 opacity-0 animate-fade-up stagger-4">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">1B+</div>
-              <div className="text-primary-foreground/60 text-sm">Global Users</div>
+              <div className="text-primary-foreground/60 text-sm">Global presence across key markets</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">100+</div>
-              <div className="text-primary-foreground/60 text-sm">Countries</div>
+              <div className="text-primary-foreground/60 text-sm">A growing portfolio of digital products</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">50+</div>
-              <div className="text-primary-foreground/60 text-sm">Products</div>
+              <div className="text-primary-foreground/60 text-sm">User-first & data-driven product philosophy</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">500+</div>
-              <div className="text-primary-foreground/60 text-sm">Team Members</div>
+              <div className="text-primary-foreground/60 text-sm">A compact, high-performance cross-functional team</div>
             </div>
           </div>
         </div>
