@@ -5,29 +5,55 @@ import { ArrowRight, Play } from "lucide-react";
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Gradient */}
+      {/* Cosmic Background with Animated Gradient */}
       <div 
         className="absolute inset-0"
-        style={{ background: "var(--gradient-hero)" }}
+        style={{ 
+          background: `
+            radial-gradient(ellipse at top left, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse at top right, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom right, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+            linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f172a 100%)
+          `,
+          animation: 'gradientShift 15s ease infinite'
+        }}
       />
       
-      {/* Abstract Shapes */}
+      {/* Stars and Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large floating circle */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-foreground/5 animate-float" />
-        <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] rounded-full bg-primary-foreground/5 animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-20 right-1/4 w-[300px] h-[300px] rounded-full bg-primary-foreground/5 animate-float" style={{ animationDelay: "4s" }} />
+        {/* Animated stars */}
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              opacity: Math.random() * 0.7 + 0.3
+            }}
+          />
+        ))}
         
-        {/* Geometric shapes */}
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 border-2 border-primary-foreground/10 rotate-45 animate-pulse-slow" />
-        <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-primary-foreground/10 rotate-12 animate-pulse-slow" style={{ animationDelay: "1s" }} />
+        {/* Large glowing orbs */}
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-purple-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] rounded-full bg-pink-500/20 blur-3xl animate-float" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-1/2 left-1/2 w-[350px] h-[350px] rounded-full bg-teal-500/15 blur-3xl animate-float" style={{ animationDelay: "6s" }} />
         
-        {/* Grid pattern */}
+        {/* Cosmic dust effect */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px"
+            backgroundImage: `radial-gradient(2px 2px at 20% 30%, white, transparent),
+              radial-gradient(2px 2px at 60% 70%, white, transparent),
+              radial-gradient(1px 1px at 50% 50%, white, transparent),
+              radial-gradient(1px 1px at 80% 10%, white, transparent),
+              radial-gradient(2px 2px at 90% 60%, white, transparent),
+              radial-gradient(1px 1px at 33% 80%, white, transparent)`,
+            backgroundSize: "200% 200%",
+            animation: 'floatParticles 20s ease-in-out infinite'
           }}
         />
       </div>
