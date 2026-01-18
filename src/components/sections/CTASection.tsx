@@ -18,7 +18,7 @@ export const CTASection = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="hero" size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
-              <a href="mailto:contact@nexax.com">
+              <a href="mailto:admin@nexax.global">
                 <Mail size={20} />
                 Get in Touch
               </a>

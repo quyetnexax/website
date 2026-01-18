@@ -77,15 +77,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail size={18} className="text-primary" />
-                <span>contact@nexax.com</span>
+                <span>admin@nexax.global</span>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Phone size={18} className="text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>(+84) 0972381151</span>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin size={18} className="text-primary mt-1" />
-                <span>123 Innovation Drive<br />San Francisco, CA 94102</span>
+                <span>RM 1508, 15/F., OFFICE TOWER TWO<br />GRAND PLAZA, 625 NATHAN ROAD<br />MONG KOK, HONG KONG</span>
               </li>
             </ul>
           </div>
