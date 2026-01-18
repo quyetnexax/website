@@ -12,8 +12,16 @@ const Index = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -58,7 +66,7 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             transform: `translateY(${scrollY * 0.5}px)`,
-            transition: 'transform 0.1s ease-out'
+            willChange: 'transform'
           }}
         >
           {/* Milky Way band */}
@@ -88,7 +96,7 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             transform: `translateY(${scrollY * 0.3}px)`,
-            transition: 'transform 0.1s ease-out'
+            willChange: 'transform'
           }}
         >
           {[...Array(100)].map((_, i) => (
@@ -110,7 +118,7 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             transform: `translateY(${scrollY * 0.2}px)`,
-            transition: 'transform 0.1s ease-out'
+            willChange: 'transform'
           }}
         >
           <div className="absolute top-1/4 -right-40 w-[600px] h-[600px] rounded-full bg-purple-500/20 blur-3xl animate-float" />
@@ -124,7 +132,7 @@ const Index = () => {
           className="absolute inset-0 opacity-20"
           style={{
             transform: `translateY(${scrollY * 0.15}px)`,
-            transition: 'transform 0.1s ease-out',
+            willChange: 'transform',
             backgroundImage: `radial-gradient(2px 2px at 20% 30%, white, transparent),
               radial-gradient(2px 2px at 60% 70%, white, transparent),
               radial-gradient(1px 1px at 50% 50%, white, transparent),
