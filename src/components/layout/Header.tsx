@@ -5,10 +5,8 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About" },
   { href: "/publishing", label: "Publishing" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Header = () => {
@@ -86,7 +84,7 @@ export const Header = () => {
               size="default"
               asChild
             >
-              <Link to="/#contact">Get in Touch</Link>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
 
@@ -115,7 +113,7 @@ export const Header = () => {
                 </Link>
               ))}
               <Button asChild className="mt-2">
-                <Link to="/#contact">Get in Touch</Link>
+                <Link to="/contact">Get in Touch</Link>
               </Button>
             </nav>
           </div>

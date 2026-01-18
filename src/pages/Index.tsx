@@ -1,8 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { AboutSection } from "@/components/sections/AboutSection";
 import { PublishingPreview } from "@/components/sections/PublishingPreview";
 import { CTASection } from "@/components/sections/CTASection";
 import { Helmet } from "react-helmet-async";
@@ -148,8 +146,6 @@ const Index = () => {
       <Header />
       <main className="relative">
         <HeroSection />
-        <ServicesSection />
-        <AboutSection />
         <PublishingPreview />
         <CTASection />
       </main>
