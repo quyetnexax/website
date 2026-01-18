@@ -19,10 +19,10 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2018", event: "Founded with a vision to scale AI globally" },
-  { year: "2020", event: "Reached 100 million users milestone" },
-  { year: "2022", event: "Expanded to 100+ countries worldwide" },
-  { year: "2024", event: "Serving 1 billion+ users globally" }
+  { year: "2020", event: "Founded with a vision to scale AI globally" },
+  { year: "2022", event: "Reached 100 million users milestone" },
+  { year: "2024", event: "Expanded to 100+ countries worldwide" },
+  { year: "2025", event: "Serving 1 billion+ users globally" }
 ];
 
 export const AboutSection = () => {
