@@ -29,7 +29,18 @@ export const PublishingPreview = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestArticles.map((article, index) => (
+          {latestArticles.map((article, index) => {
+            const gradients = [
+              'from-purple-500/20 via-blue-500/10 to-purple-500/5',
+              'from-blue-500/20 via-teal-500/10 to-blue-500/5',
+              'from-pink-500/20 via-purple-500/10 to-pink-500/5'
+            ];
+            const iconColors = [
+              'text-purple-500/30',
+              'text-blue-500/30',
+              'text-pink-500/30'
+            ];
+            return (
             <Link
               key={article.id}
               to={`/publishing/${article.slug}`}
@@ -37,10 +48,13 @@ export const PublishingPreview = () => {
             >
               <article className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-2 border border-border/50 h-full flex flex-col will-change-transform">
                 {/* Image */}
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 will-change-transform">
-                    <div className="text-4xl font-bold gradient-text opacity-30">NX</div>
+                <div className={`aspect-[16/10] bg-gradient-to-br ${gradients[index]} overflow-hidden relative`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`text-6xl font-bold ${iconColors[index]} group-hover:scale-110 transition-transform duration-300`}>NX</div>
                   </div>
+                  {/* Decorative elements */}
+                  <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/5 blur-xl"></div>
+                  <div className="absolute bottom-4 left-4 w-20 h-20 rounded-full bg-white/10 blur-xl"></div>
                 </div>
 
                 {/* Content */}
@@ -81,7 +95,7 @@ export const PublishingPreview = () => {
                 </div>
               </article>
             </Link>
-          ))}
+          )})}
         </div>
       </div>
     </section>
