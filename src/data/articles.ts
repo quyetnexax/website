@@ -58,7 +58,7 @@ The key is finding the right balance between data-driven decisions and creative 
     excerpt: "Creating design systems that prioritize user experience while maintaining consistency across platforms.",
     date: "2025-12-12",
     tags: ["Design", "UX", "Systems"],
-    image: "/placeholder.svg",
+    image: "/images/design-systems-article.jpg",
     slug: "user-first-design-systems",
     content: `A great design system is more than a collection of components—it's a philosophy that guides how users interact with your product. At NexaX, we've developed design principles that put users at the center of every decision.
 
