@@ -91,6 +91,16 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  
+  /* Optimize scroll performance */
+  header {
+    will-change: background-color, box-shadow;
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 @layer components {
