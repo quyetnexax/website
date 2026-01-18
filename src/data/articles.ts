@@ -86,7 +86,7 @@ The next evolution of mobile-first strategy involves AI integration, voice inter
     excerpt: "Understanding the nuances of building products for diverse global audiences requires more than just translation.",
     date: "2026-01-05",
     tags: ["Global", "Localization", "Markets"],
-    image: "/placeholder.svg",
+    image: "/images/global-localization-article.jpg",
     slug: "global-markets-localization",
     content: `True localization goes far beyond translating text. It's about understanding cultural nuances, local preferences, and regional user behaviors. At NexaX, we serve users in over 100 countries, and we've learned that success in global markets requires deep cultural understanding.
 
