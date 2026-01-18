@@ -16,7 +16,7 @@ export const articles: Article[] = [
     excerpt: "Exploring how artificial intelligence is reshaping the mobile app landscape and what it means for developers and users alike.",
     date: "2024-12-10",
     tags: ["AI", "Mobile", "Technology"],
-    image: "/placeholder.svg",
+    image: "/images/ai-mobile-article.jpg",
     slug: "future-of-ai-mobile-applications",
     content: `Artificial intelligence is no longer a futuristic concept—it's here, and it's transforming mobile applications in unprecedented ways. From personalized recommendations to voice assistants and predictive analytics, AI is becoming the backbone of modern mobile experiences.
 

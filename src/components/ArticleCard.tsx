@@ -11,13 +11,22 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
     <Link to={`/publishing/${article.slug}`} className="group">
       <article className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-2 border border-border/50 h-full flex flex-col will-change-transform">
         {/* Image */}
-        <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 via-accent/20 to-primary/5 overflow-hidden relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-6xl font-bold text-primary/20 group-hover:scale-110 transition-transform duration-300">NX</div>
-          </div>
-          {/* Decorative elements */}
-          <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-primary/10 blur-xl"></div>
-          <div className="absolute bottom-4 left-4 w-20 h-20 rounded-full bg-accent/20 blur-xl"></div>
+        <div className="aspect-[16/10] overflow-hidden relative bg-gradient-to-br from-primary/10 via-accent/20 to-primary/5">
+          {article.image && article.image !== '/placeholder.svg' ? (
+            <img 
+              src={article.image} 
+              alt={article.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-6xl font-bold text-primary/20 group-hover:scale-110 transition-transform duration-300">NX</div>
+              </div>
+              <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-primary/10 blur-xl"></div>
+              <div className="absolute bottom-4 left-4 w-20 h-20 rounded-full bg-accent/20 blur-xl"></div>
+            </>
+          )}
         </div>
 
         {/* Content */}
