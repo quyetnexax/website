@@ -30,7 +30,7 @@ The key to successful AI integration lies in understanding user behavior pattern
     excerpt: "Key insights from building and scaling mobile products that serve billions of users across global markets.",
     date: "2024-12-05",
     tags: ["Scale", "Engineering", "Growth"],
-    image: "/placeholder.svg",
+    image: "/images/scaling-products-article.jpg",
     slug: "scaling-products-billions",
     content: `Scaling a product to serve billions of users is both an engineering challenge and a design philosophy. It requires rethinking traditional approaches to architecture, performance, and user experience.
 

@@ -49,7 +49,7 @@ export const PublishingPreview = () => {
               <article className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-2 border border-border/50 h-full flex flex-col will-change-transform">
                 {/* Image */}
                 <div className={`aspect-[16/10] overflow-hidden relative bg-gradient-to-br ${gradients[index]}`}>
-                  {index === 0 && article.image && article.image !== '/placeholder.svg' ? (
+                  {(index === 0 || index === 1) && article.image && article.image !== '/placeholder.svg' ? (
                     <img 
                       src={article.image} 
                       alt={article.title}
