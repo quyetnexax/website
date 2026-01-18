@@ -44,7 +44,7 @@ The most important lesson? Start with scale in mind from day one. Retrofitting s
     excerpt: "How we leverage data analytics to make informed product decisions and drive sustainable growth.",
     date: "2024-11-28",
     tags: ["Data", "Product", "Analytics"],
-    image: "/placeholder.svg",
+    image: "/images/data-driven-article.jpg",
     slug: "data-driven-product-decisions",
     content: `In an era of information overload, the ability to extract meaningful insights from data has become a critical competitive advantage. At NexaX, we've built a culture where every product decision is backed by robust data analysis.
 
