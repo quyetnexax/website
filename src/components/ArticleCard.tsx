@@ -9,10 +9,10 @@ interface ArticleCardProps {
 export const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <Link to={`/publishing/${article.slug}`} className="group">
-      <article className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+      <article className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-2 border border-border/50 h-full flex flex-col will-change-transform">
         {/* Image */}
         <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent overflow-hidden">
-          <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+          <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 will-change-transform">
             <div className="text-4xl font-bold gradient-text opacity-30">NX</div>
           </div>
         </div>
