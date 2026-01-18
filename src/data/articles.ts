@@ -72,7 +72,7 @@ Building a user-first design system requires constant iteration and feedback. We
     excerpt: "How mobile-first thinking has evolved and what it means for product development in the coming years.",
     date: "2026-01-10",
     tags: ["Mobile", "Strategy", "Product"],
-    image: "/placeholder.svg",
+    image: "/images/mobile-first-strategy-article.jpg",
     slug: "evolution-mobile-first-strategy",
     content: `Mobile-first is no longer just about responsive design—it's a comprehensive approach to product development that prioritizes the mobile experience from conception to delivery.
 
