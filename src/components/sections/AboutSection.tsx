@@ -51,14 +51,14 @@ export const AboutSection = () => {
               {values.map((value, index) => (
                 <div 
                   key={value.title}
-                  className="flex gap-4 p-4 rounded-xl bg-muted/50 hover:bg-card hover:shadow-md transition-all duration-300"
+                  className="group flex gap-4 p-4 rounded-xl bg-muted/50 hover:bg-card hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <value.icon size={24} className="text-primary" />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                    <value.icon size={24} className="text-primary group-hover:text-primary transition-colors duration-300" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white hover:text-foreground transition-colors duration-300">{value.title}</h3>
-                    <p className="text-white/80 hover:text-muted-foreground text-sm leading-relaxed transition-colors duration-300">{value.description}</p>
+                    <h3 className="font-semibold text-white group-hover:text-foreground transition-colors duration-300">{value.title}</h3>
+                    <p className="text-white/80 group-hover:text-muted-foreground text-sm leading-relaxed transition-colors duration-300">{value.description}</p>
                   </div>
                 </div>
               ))}
