@@ -97,9 +97,9 @@ export const Footer = () => {
             © {new Date().getFullYear()} NexaX. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+            <Link to="/privacy-policy" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors">
               Privacy Policy
-            </a>
+            </Link>
             <a href="#" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors">
               Terms of Service
             </a>
