@@ -82,6 +82,50 @@ const PrivacyPolicy = () => {
                 </div>
               </section>
 
+              {/* App Permissions */}
+              <section className="bg-card rounded-2xl p-8 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Shield className="h-5 w-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">App Permissions</h2>
+                </div>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    Our applications may request certain permissions to provide you with the best 
+                    possible experience and functionality. We are committed to transparency about 
+                    why we need these permissions and how they are used.
+                  </p>
+                  
+                  <div className="space-y-4 mt-6">
+                    <div className="border-l-4 border-primary pl-4">
+                      <h4 className="font-semibold text-foreground mb-2">Camera Permission</h4>
+                      <p className="text-sm">
+                        Our app requests camera access to enable you to scan documents, QR codes, 
+                        or capture images for processing within the app. We do not store, transmit, 
+                        or share any photos or videos taken through the camera without your explicit 
+                        consent. Camera data is processed locally on your device and is only used 
+                        for the specific features you choose to use.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                      <p className="text-blue-800 dark:text-blue-200 text-sm">
+                        <strong>Important:</strong> You can revoke camera permissions at any time 
+                        through your device settings. Denying camera access will not affect other 
+                        features of the app, though camera-dependent features will be disabled.
+                      </p>
+                    </div>
+
+                    <p className="text-sm">
+                      We believe in minimal permission requests and only ask for access to features 
+                      that are essential for the app's core functionality. Your privacy and security 
+                      are our top priorities.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
               {/* How We Use Information */}
               <section className="bg-card rounded-2xl p-8 border border-border/50">
                 <div className="flex items-center gap-3 mb-6">
