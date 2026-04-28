@@ -1,0 +1,26 @@
+google.com, pub-6676377890358166, DIRECT, f08c47fec0942fa0
+facebook.com, 224987104913639, DIRECT, c3e20eee3f780d68
+pangleglobal.com, 5035805, DIRECT
+pangleglobal.com, 45779, RESELLER
+liftoff.io, 7f6945815e6, RESELLER
+adcolony.com, 7d04a18a58085918, RESELLER, 1ad675c9de6b5176
+chartboost.com, 5da62a1035b91e0aff190bf7, RESELLER
+smaato.com, 1100044156, RESELLER, 07bcf65f187117b4
+start.io, wbe, RESELLER
+bigo.sg, 130, RESELLER
+yeahmobi.com, 5135315, RESELLER
+zmaticoo.com, 114490, RESELLER
+applovin.com, fdf57fe4a9899e338805370d3e329742, RESELLER
+mintegral.com, 28266, RESELLER, 0aeed750c80d6423
+adingo.jp, 33821, RESELLER
+unity.com, 6040365, DIRECT
+unity.com, 6040348, DIRECT
+unity.com, 6040371, DIRECT
+unity.com, 6040375, DIRECT
+rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 22884, RESELLER, 0bfd66d529a55807
+liftoff.io, 699bcf3a4c0d69d44ce3e230, DIRECT
+vungle.com, 699bcf3a4c0d69d44ce3e230, DIRECT, c107d686becd2d77
+smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+sharethrough.com, 4194-OB, RESELLER, d53b998a7bd4ecd5
